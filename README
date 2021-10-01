@@ -1,0 +1,17 @@
+# Cmake Files for 3dfx Win2k/XP V3/V4/V5 Driver
+
+With the help of these CMake files, you should be able to build the 3dfx drivers - minor code changes are needed.
+The 3dfx driver source code is not included.
+
+I was able to build the driver on Windows 10 using:
+- Windows DDK for WinXP
+- DX81SDK
+- several patches to the driver source code to get it to compile.
+
+Using that, the driver can be compiled, but it doesn't work. I never invested the time to debug it.
+
+# Code Changes needed to the original Driver Code
+
+- Several API calls need an APIENTRY added after the return type.
+- several headers don't have include guards, they need to be added.
+
